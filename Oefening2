@@ -1,0 +1,17 @@
+import tkinter as tk
+
+banaan = tk.Tk()
+banaan.geometry("300x200")
+tk.Label(banaan,text="Aya").pack()
+
+
+knop = tk.Button(
+    banaan,
+    text='Knop',
+    command=banaan,
+    bg='#4CAF50',
+    fg='white',
+    font=('Arial', 12),
+).pack()
+
+banaan.mainloop()
