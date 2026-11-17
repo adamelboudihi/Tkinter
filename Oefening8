@@ -1,0 +1,26 @@
+from tkinter import *
+
+root = Tk()
+root.title("Registratie")
+
+# Label bovenaan met pack()
+titel = Label(root, text="Registratie", font=("Arial", 14))
+titel.pack(pady=10)
+
+# Frame voor de overige widgets
+frame = Frame(root)
+frame.pack(padx=10, pady=10)
+
+# Labels en Entry-velden met grid()
+Label(frame, text="Naam:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
+entry_naam = Entry(frame)
+entry_naam.grid(row=0, column=1, padx=5, pady=5)
+
+Label(frame, text="E-mail:").grid(row=1, column=0, padx=5, pady=5, sticky="e")
+entry_email = Entry(frame)
+entry_email.grid(row=1, column=1, padx=5, pady=5)
+
+# Knop onderaan
+Button(frame, text="Registreren").grid(row=2, column=0, columnspan=2, pady=10)
+
+root.mainloop()
