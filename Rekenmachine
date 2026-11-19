@@ -1,17 +1,27 @@
 import tkinter as tk
 
 venster = tk.Tk()
-venster.geometry("500x500")
+venster.geometry("300x200")
 
 venster.title("Rekenmachine")
+
+
 tk.Label(venster, text="Getal1").grid(row=0, column=0)
-tk.Entry(venster, ).grid(row=0, column=1)
+tk.Entry(venster, ).grid(row=0, column=1,columnspan=3)
+
+
 tk.Label(venster, text="Getal2").grid(row=1, column=0)
-tk.Entry(venster, ).grid(row=1, column=1)
-tk.Button(venster, text="+").grid(row=2, column=0)
-tk.Button(venster, text="-").grid(row=2, column=1)
-tk.Button(venster, text="*").grid(row=2, column=2)
-tk.Button(venster, text="/").grid(row=2, column=3)
+tk.Entry(venster, ).grid(row=1, column=1,columnspan=3)
+
+
+tk.Button(venster, text="+").grid(row=2, column=0,padx=10,pady=10,ipadx=7,ipady=7)
+tk.Button(venster, text="-").grid(row=2, column=1,padx=10,pady=10,ipadx=7,ipady=7)
+tk.Button(venster, text="*").grid(row=2, column=2,padx=10,pady=10,ipadx=7,ipady=7)
+tk.Button(venster, text="/").grid(row=2, column=3,padx=10,pady=10,ipadx=7,ipady=7)
+
+
 tk.Label(venster, text="Resultaat").grid(row=4, column=0)
-tk.Entry(venster, ).grid(row=4, column=1)
+tk.Entry(venster, ).grid(row=4, column=1,columnspan=3)
+
+
 venster.mainloop()
